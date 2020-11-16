@@ -4,9 +4,6 @@
  * This module contains library functions to fetch and parse YAML or JSON content
  * at local or remote URLs.
  *
- * NOTE: This module codebase currently lives in the [EventGate](https://github.com/wikimedia/eventgate) repository.
- * TODO: Move url-get to its own git repository.
- *
  * @module url-get
  */
 
