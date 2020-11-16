@@ -1,5 +1,5 @@
 {
-  "name": "url-get",
+  "name": "@wikimedia/url-get",
   "version": "1.0.0",
   "description": "Utility functions to get Objects from YAML or JSON at local or remote URIs",
   "main": "index.js",
