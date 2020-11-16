@@ -12,7 +12,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/wikimedia/eventgate.git"
+    "url": "git@github.com:wikimedia/node-url-get.git"
   },
   "dependencies": {
     "js-yaml": "^3.12.0",
