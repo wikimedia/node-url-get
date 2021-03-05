@@ -4,10 +4,6 @@
 This module contains library functions to fetch and parse YAML or JSON content
 at local or remote URLs.
 
-NOTE: This module codebase currently lives in the [EventGate](https://github.com/wikimedia/eventgate) repository.
-TODO: Move url-get to its own git repository.
-
-
 * [url-get](#module_url-get)
     * [~objectFactory(data)](#module_url-get..objectFactory) ⇒ <code>Object</code>
     * [~uriHasProtocol(uri)](#module_url-get..uriHasProtocol) ⇒ <code>boolean</code>
@@ -24,22 +20,22 @@ TODO: Move url-get to its own git repository.
 Converts a utf-8 byte buffer or a YAML/JSON string into
 an object and returns it.
 
-**Kind**: inner method of [<code>url-get</code>](#module_url-get)  
+**Kind**: inner method of [<code>url-get</code>](#module_url-get)
 
 | Param | Type |
 | --- | --- |
-| data | <code>string</code> \| <code>Buffer</code> \| <code>Object</code> | 
+| data | <code>string</code> \| <code>Buffer</code> \| <code>Object</code> |
 
 <a name="module_url-get..uriHasProtocol"></a>
 
 ### url-get~uriHasProtocol(uri) ⇒ <code>boolean</code>
 Returns true if the uri has protocol schema on the front, else false.
 
-**Kind**: inner method of [<code>url-get</code>](#module_url-get)  
+**Kind**: inner method of [<code>url-get</code>](#module_url-get)
 
 | Param | Type |
 | --- | --- |
-| uri | <code>string</code> | 
+| uri | <code>string</code> |
 
 <a name="module_url-get..fileExtension"></a>
 
@@ -49,11 +45,11 @@ of a filename path. If no file extension is present, this returns an empty strin
 If the final part of a file name after '.' is numeric, this is not a file
 extension, and an empty string will be returned.
 
-**Kind**: inner method of [<code>url-get</code>](#module_url-get)  
+**Kind**: inner method of [<code>url-get</code>](#module_url-get)
 
 | Param | Type |
 | --- | --- |
-| filename | <code>string</code> | 
+| filename | <code>string</code> |
 
 <a name="module_url-get..resolveUri"></a>
 
@@ -65,7 +61,7 @@ If the uri already ends in a file extensions, defaultFileExtension  will not be 
 If the baseUri given does not have a protocol schema, it is assumed to be file://.
 file:// paths will be resolved with path.resolve to be transformed into absolute file paths.
 
-**Kind**: inner method of [<code>url-get</code>](#module_url-get)  
+**Kind**: inner method of [<code>url-get</code>](#module_url-get)
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -80,7 +76,7 @@ Given a string URL, returns a Promise of the contents at that
 URL.  Supports both file:// (via fs.readFile) and other http
 based URLs with preq.get.
 
-**Kind**: inner method of [<code>url-get</code>](#module_url-get)  
+**Kind**: inner method of [<code>url-get</code>](#module_url-get)
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -94,7 +90,7 @@ Given a URL, returns a Promise of the contents at that
 converted into an Object.  The content at URL
 must either be a JSON or YAML string.
 
-**Kind**: inner method of [<code>url-get</code>](#module_url-get)  
+**Kind**: inner method of [<code>url-get</code>](#module_url-get)
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -108,7 +104,7 @@ Given a list of URLs, returns a Promise of the first resolved
 result of urlGetObject. If no URL resolves, this will return
 the final rejection.
 
-**Kind**: inner method of [<code>url-get</code>](#module_url-get)  
+**Kind**: inner method of [<code>url-get</code>](#module_url-get)
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -121,7 +117,7 @@ the final rejection.
 Combines resolveUri and urlGetObjectFirst to return the first
 baseUri + uri combination that resolves to an object.
 
-**Kind**: inner method of [<code>url-get</code>](#module_url-get)  
+**Kind**: inner method of [<code>url-get</code>](#module_url-get)
 
 | Param | Type | Description |
 | --- | --- | --- |
